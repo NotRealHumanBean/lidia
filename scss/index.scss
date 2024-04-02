@@ -1,0 +1,197 @@
+@import "hero.scss";
+@import "ft_serv.scss";
+@import "rev_map.scss";
+@import "reusableheader.scss";
+
+body {
+    font-family: "Plus Jakarta Sans";
+    font-weight: 400;
+    color: #5e6282;
+}
+
+[class*="__container"] {
+    max-width: 1230px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: clip;
+}
+.wrapper> main {
+    flex-grow: 1;
+}
+//------------------------------------------------------------------------
+.header {
+    padding-top: 77px;
+    position: relative;
+    z-index: 50;
+    @media(max-width: 479.98px) {
+        padding-top: 15px;
+        &__logo {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            flex: 0 0 auto;
+            max-width: 150px;
+        }
+    }
+    &__container {
+        display: flex;
+        align-items: center;
+        gap: 125px;
+        @media(max-width: 991.98px) {
+            gap: 50px;
+        }
+        @media(max-width: 479.98px) {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+    &__logo {
+        flex: 0 0 80px;
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+}
+.menu {
+    &__list {
+        display: flex;
+        align-items: center;
+        column-gap: 40px;
+        row-gap: 13px;
+        flex-wrap: wrap;
+        @media(max-width: 991.98px) {
+            column-gap: 20px;
+            justify-content: center;
+        }
+    }
+    &__link {
+        font-size: 14px;
+        @media(max-width: 479.98px) {
+            font-size: 20px;
+        }
+        color: rgb(154, 158, 166);
+        transition: color 0.3s 
+    }
+    &__link:hover {
+        color: rgb(71, 55, 255);
+    }
+}
+//===========================================================================================================
+.page {
+    &__hero {
+        margin-bottom: 170px;
+    }
+    &__location {
+        margin-bottom: 240px;
+    }
+    &__features, &__services, &__reviews, &__location  {
+        margin-bottom: 200px;
+    }
+
+    @media(max-width: 1200px) {
+        &__hero {
+            margin-bottom: 100px;
+        }
+        &__features, &__services, &__reviews, &__location  {
+            margin-bottom: 100px;
+        }
+    }
+    @media(max-width: 991.98px) {
+        &__hero {
+            margin-bottom: 60px;
+        }
+        &__features, &__services, &__reviews, &__locatio {
+            margin-bottom: 60px;
+        }
+    }
+    @media(max-width: 767.98px) {
+        &__hero {
+            margin-bottom: 50px;
+        }
+        &__features, &__services, &__reviews, &__locatio {
+            margin-bottom: 50px;
+        }
+    }
+    @media(max-width: 479.98px) {
+        &__hero {
+            padding-top: 40px;
+        }
+    }
+}
+.footer {
+    &__body {
+        margin-bottom: 95px;
+        @media(max-width: 1200px) {
+            margin-bottom: 70px;
+        }
+        @media(max-width: 991.98px) {
+            margin-bottom: 50px;
+        }
+        @media(max-width: 767.98px) {
+            margin-bottom: 30px;
+        }
+    }
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 100px;
+        row-gap: 30px;
+        justify-content: center;
+    }
+    &__item {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    &__title {
+        color:#000;
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 25px;
+    }
+    &__logo {
+        max-width: 248px;
+    }
+    &__social {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 17px;
+        height: 93px;
+        align-items: center;
+    }
+    &__link {
+        max-height: 93px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 500;
+        color:#000
+    }
+    &__link:hover {
+        text-decoration: underline;
+    }
+    &__copy {
+        text-align: center;
+        color:#fff;
+        background-color: #4475F2;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+.special {
+    display: flex;
+    justify-content: space-between;
+    a {
+        height: 93px;
+    }
+}
